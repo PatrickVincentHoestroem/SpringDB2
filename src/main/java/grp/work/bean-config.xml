@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userFactory" class="grp.work.services.UserControl.UserFactory"/>
+    <bean id="userContainer" class="grp.work.services.UserControl.UserContainer"/>
+    <bean id="userHandler" class="grp.work.services.UserControl.UserHandler">
+        <constructor-arg index="0" ref="userFactory"/>
+        <constructor-arg index="1" ref="userContainer"/>
+    </bean>
+</beans>

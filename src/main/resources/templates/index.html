@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Phone</th>
+        </tr>
+        <tr th:each="user:${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.firstname}"></td>
+            <td th:text="${user.phone}"></td>
+        </tr>
+        <tr th:each="text:${texts}">
+            <td th:text="${text}"></td>
+        </tr>
+    </table>
+<h1>SPRING IS NO LONGER BAD :)</h1>
+</body>
+</html>
