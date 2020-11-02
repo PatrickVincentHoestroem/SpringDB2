@@ -1,8 +1,13 @@
 package grp.work.services.UserControl;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("singleton")
 public class UserHandler {
-    private UserFactory userFactory;
-    private UserContainer userContainer;
+    private final UserFactory userFactory;
+    private final UserContainer userContainer;
 
     public UserHandler(UserFactory userFactory, UserContainer userContainer) {
         this.userFactory = userFactory;

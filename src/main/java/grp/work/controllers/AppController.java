@@ -37,7 +37,7 @@ public class AppController {
         userHandler.createUser("Kasper", "Larsen", "21658734");
         userHandler.createUser("Kim", "Jørgensen", "23674598");
         userHandler.createUser("Kurt", "Vestergård", "45764367");
-        return userHandler.getContainer().getList();
+        return userHandler.getContainer();
     }
     @ModelAttribute
     public void addTexts(final Model model) {

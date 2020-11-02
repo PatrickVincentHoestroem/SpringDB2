@@ -47,7 +47,7 @@ class UserTests {
         userHandler.createUser("Kim", "Jørgensen", "23674598");
         userHandler.createUser("Kurt", "Vestergård", "45764367");
         userHandler.deleteUser(0);
-        Assertions.assertEquals(3, userHandler.getContainer().getList().size());
+        Assertions.assertEquals(3, userHandler.getContainer().size());
         Assertions.assertEquals(1, userHandler.getContainer().get(0).getId());
         Assertions.assertEquals("Kasper", userHandler.getContainer().get(0).getFirstname());
         Assertions.assertEquals("Larsen", userHandler.getContainer().get(0).getLastname());
